@@ -1,0 +1,6 @@
+== Deploy Bookinfo sample to both clusters
+
+[source,bash]
+----
+include::../steps/deploy-bookinfo/01.sh
+----

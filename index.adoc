@@ -16,3 +16,5 @@ video::18dpBukOYSk[youtube]
 endif::[]
 
 include::modules/env-prep.adoc[]
+
+include::modules/deploy-bookinfo.adoc[]
