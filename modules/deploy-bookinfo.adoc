@@ -2,5 +2,5 @@
 
 [source,bash]
 ----
-include::../steps/deploy-bookinfo/01.sh
+include::../steps/deploy-bookinfo/01.sh[]
 ----
