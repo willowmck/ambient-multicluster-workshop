@@ -5,7 +5,13 @@ explore how Solo.io Ambient enables secure service-to-service communication in a
 
 image:assets/overview.png[]
 
+ifdef::env-github[]
+image::https://img.youtube.com/vi/18dpBukOYSk/maxresdefault.jpg[link=https://youtu.be/18dpBukOYSk]
+endif::[]
+
+ifndef::env-github[]
 video::18dpBukOYSk[youtube]
+endif::[]
 
 == Preparing Your Environment
 
