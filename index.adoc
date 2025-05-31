@@ -18,3 +18,5 @@ endif::[]
 include::modules/env-prep.adoc[]
 
 include::modules/deploy-bookinfo.adoc[]
+
+include::modules/install-istio.adoc[]

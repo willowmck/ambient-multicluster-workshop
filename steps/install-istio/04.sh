@@ -1,0 +1,1 @@
+istioctl multicluster link --contexts=$CLUSTER1,$CLUSTER2 -n istio-gateways

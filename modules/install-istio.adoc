@@ -1,0 +1,62 @@
+== Install Istio on both clusters using Gloo Operator
+
+Install the operator
+
+[source,bash]
+----
+include::../steps/install-istio/01.sh[]
+----
+
+Use the `ServiceMeshController` resource to install Istio on both clusters.
+
+[source,bash]
+----
+include::../steps/install-istio/02.sh[]
+----
+
+=== Peer the clusters together
+
+Expose using an east-west gateway.
+
+[source,bash]
+----
+include::../steps/install-istio/03.sh[]
+----
+
+Instead of using `istioctl`, you can also apply a `Gateway` yaml.  This will be discussed in a different workshop.
+
+Now, link the clusters together.
+
+[source,bash]
+----
+include::../steps/install-istio/04.sh[]
+----
+
+=== Enable Istio for the bookinfo namespace
+
+[source,bash]
+----
+include::../steps/install-istio/05.sh[]
+----
+
+=== Enable productpage to be multi-cluster on both clusters
+
+To make productpage available across clusters, we have the option of one of the following labels on its Kubernetes Service:
+
+**solo.io/service-scope=global**
+
+- Creates a new global service: `<name>.<namespace>.mesh.internal`
+- The original service (`<name>.<namespace>.svc.cluster.local`) remains unchanged and includes only local endpoints.
+
+**solo.io/service-scope=global-only**
+
+- Modifies the original service to include both local and remote endpoints.
+- No additional service is created; remote endpoints are merged into the existing service DNS.
+
+Let's use the first option:
+
+[source,bash]
+----
+include::../steps/install-istio/06.sh[]
+----
+
