@@ -1,0 +1,16 @@
+apiVersion: chainsaw.kyverno.io/v1alpha1
+kind: Test
+metadata:
+  name: test-env-prep
+spec:
+  steps:
+  - try:
+    - script: 
+        content: |
+          for f in $(ls ../*.sh); do eval bash $f; done
+  - try:
+    - script:
+        content: |
+          ${HOME}/.istioctl/bin/istioctl version 
+        check:
+          (contains($stdout, '1.25.3-solo')): true
