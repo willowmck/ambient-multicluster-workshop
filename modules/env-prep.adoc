@@ -5,7 +5,7 @@ Create two clusters and set the environment variables to their context.  You wil
 
 This is an important step as the rest of the workshop relies on these environment variables being set.
 
-[source,bash]
+[,console]
 ----
 export CLUSTER1=gke_ambient_one 
 export CLUSTER2=gke_ambient_two
@@ -14,7 +14,7 @@ export GLOO_MESH_LICENSE_KEY=<your license key>
 
 Next, download Solo's 1.25.3 `istioctl` binary.
 
-[source,bash]
+[,console]
 ----
 include::../steps/env-prep/01.sh[]
 ----

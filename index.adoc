@@ -1,4 +1,6 @@
 = Solo.io Istio Ambient Multi-cluster Workshop
+:source-highlighter: rouge
+:toc:
 
 In this workshop, you will set up Istio Ambient in a multi-cluster environment, deploy a sample Bookinfo app, and 
 explore how Solo.io Ambient enables secure service-to-service communication in all directions.
