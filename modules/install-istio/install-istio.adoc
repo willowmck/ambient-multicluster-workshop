@@ -4,14 +4,14 @@ Install the operator
 
 [source,bash]
 ----
-include::../steps/install-istio/01.sh[]
+include::scripts/01.sh[]
 ----
 
 Use the `ServiceMeshController` resource to install Istio on both clusters.
 
 [source,bash]
 ----
-include::../steps/install-istio/02.sh[]
+include::scripts/02.sh[]
 ----
 
 === Peer the clusters together
@@ -20,7 +20,7 @@ Expose using an east-west gateway.
 
 [source,bash]
 ----
-include::../steps/install-istio/03.sh[]
+include::scripts/03.sh[]
 ----
 
 Instead of using `istioctl`, you can also apply a `Gateway` yaml.  This will be discussed in a different workshop.
@@ -29,14 +29,14 @@ Now, link the clusters together.
 
 [source,bash]
 ----
-include::../steps/install-istio/04.sh[]
+include::scripts/04.sh[]
 ----
 
 === Enable Istio for the bookinfo namespace
 
 [source,bash]
 ----
-include::../steps/install-istio/05.sh[]
+include::scripts/05.sh[]
 ----
 
 === Enable productpage to be multi-cluster on both clusters
@@ -57,6 +57,6 @@ Let's use the first option:
 
 [source,bash]
 ----
-include::../steps/install-istio/06.sh[]
+include::scripts/06.sh[]
 ----
 

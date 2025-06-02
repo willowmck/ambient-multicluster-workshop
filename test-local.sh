@@ -17,13 +17,13 @@ if [ -z "$CLUSTER2" ]; then
   export CLUSTER2=cluster2
 fi
 
-steps=("env-prep" "install-istio" "deploy-bookinfo")
+modules=("env-prep" "install-istio" "deploy-bookinfo")
 
 CWD=$(pwd)
 
-for step in $steps; do
-    echo "Running tests in step: $step"
-    cd $CWD/steps/$step
+for module in $modules; do
+    echo "Running tests in module: $module"
+    cd $CWD/modules/$module
     chainsaw test
     cd $CWD
 done

@@ -17,8 +17,8 @@ ifndef::env-github[]
 video::18dpBukOYSk[youtube]
 endif::[]
 
-include::modules/env-prep.adoc[]
+include::modules/env-prep/env-prep.adoc[]
 
-include::modules/deploy-bookinfo.adoc[]
+include::modules/deploy-bookinfo/deploy-bookinfo.adoc[]
 
-include::modules/install-istio.adoc[]
+include::modules/install-istio/install-istio.adoc[]
