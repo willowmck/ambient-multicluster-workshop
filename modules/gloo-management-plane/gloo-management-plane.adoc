@@ -30,4 +30,4 @@ Launch the UI:
 include::scripts/04.sh[]
 ----
 
-image::assets/gloo-mgmt-ui.png
+image::assets/gloo-mgmt-ui.png[]
