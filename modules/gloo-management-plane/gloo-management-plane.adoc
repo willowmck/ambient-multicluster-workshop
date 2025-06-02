@@ -30,4 +30,5 @@ Launch the UI:
 include::scripts/04.sh[]
 ----
 
-image::assets/gloo-mesh-ui.png[]
+image::modules/gloo-management-plane/assets/gloo-mesh-ui.png[width=100%]
+

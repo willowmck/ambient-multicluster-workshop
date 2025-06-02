@@ -1,6 +1,6 @@
 == Expose Productpage using Istio Gateway
 
-image:assets/image-7.png[]
+image:modules/expose-productpage/assets/image-7.png[]
 
 Apply the following Kubernetes Gateway API resources to cluster1 to expose productpage service using an Istio gateway:
 

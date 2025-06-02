@@ -1,7 +1,7 @@
 == Automatic and Manual Failover
 
 === productpage failover
-image:assets/image-5.png[]
+image::modules/ambient-failover/assets/image-5.png[]
 
 Scale down productpage on cluster1 to simulate a failure:
 
@@ -20,7 +20,7 @@ inclusde::scripts/02.sh[]
 ----
 
 === details failover
-image:assets/image-6.png[]
+image::modules/ambient-failover/assets/image-6.png[]
 
 We can also scale down other services. Let's enable `details` to be multi-cluster and scale it down.
 
