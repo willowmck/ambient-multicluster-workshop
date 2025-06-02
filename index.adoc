@@ -22,3 +22,5 @@ include::modules/env-prep/env-prep.adoc[]
 include::modules/deploy-bookinfo/deploy-bookinfo.adoc[]
 
 include::modules/install-istio/install-istio.adoc[]
+
+include::modules/expose-productpage/expose-productpage.adoc[]

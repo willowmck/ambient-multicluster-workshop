@@ -1,0 +1,19 @@
+== Expose Productpage using Istio Gateway
+
+image:assets/image-7.png[]
+
+Apply the following Kubernetes Gateway API resources to cluster1 to expose productpage service using an Istio gateway:
+
+[source,bash]
+----
+include::scripts/01.sh[]
+----
+
+Wait until a LB IP gets assigned to bookinfo-gateway-istio svc and then visit the app!
+
+[source,bash]
+----
+inclusde::scripts/02.sh[]
+----
+
+Voila! This should be round robinning between productpage on both clusters.
