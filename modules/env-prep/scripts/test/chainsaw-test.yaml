@@ -5,10 +5,6 @@ metadata:
 spec:
   steps:
   - try:
-    - script: 
-        content: |
-          for f in $(ls ../*.sh); do eval bash $f; done
-  - try:
     - script:
         content: |
           ${HOME}/.istioctl/bin/istioctl version 
