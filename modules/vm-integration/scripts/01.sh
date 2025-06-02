@@ -1,0 +1,1 @@
+istioctl bootstrap --namespace vm1 --service-account vm1

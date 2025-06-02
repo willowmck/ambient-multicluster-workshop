@@ -1,0 +1,1 @@
+export BOOTSTRAP_TOKEN=<set from previous command>

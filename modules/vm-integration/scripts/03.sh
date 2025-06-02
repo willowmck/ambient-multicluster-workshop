@@ -1,0 +1,1 @@
+docker run -d -e BOOTSTRAP_TOKEN=${BOOTSTRAP_TOKEN} --network=host us-docker.pkg.dev/gloo-mesh/istio-e038d180f90a/ztunnel:1.25.1-solo-distroless

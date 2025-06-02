@@ -30,3 +30,5 @@ include::modules/ambient-failover/ambient-failover.adoc[]
 include::modules/add-waypoints-for-l7/add-waypoints-for-l7.adoc[]
 
 include::modules/egress-gateway/egress-gateway.adoc[]
+
+include::modules/vm-integration/vm-integration.adoc[]
