@@ -1,0 +1,51 @@
+== Egress Gateway
+
+In addition to managing traffic coming into the mesh and within the mesh, ambient mesh can also manage traffic leaving the mesh. This includes observing the traffic and enforcing policies against it.
+
+Just as a waypoint can be used for traffic addressed to a service inside your cluster, a gateway can be used for traffic that leaves your cluster.
+
+In Istio, you can direct traffic to this gateway on a host-by-host basis using the ServiceEntry resource, which is bound to a waypoint used for egress control.
+
+This section will only use $CLUSTER1.
+
+First, we'll deploy an egress gateway in the `istio-egress` namespace, and call it `egress-gateway`.
+
+[source,bash]
+----
+include::scripts/01.sh[]
+----
+
+If you plan on creating SE's in the istio-egress namespace, you can label just the ns and not need to label every SE:
+
+[source,bash]
+----
+include::scripts/02.sh[]
+----
+
+Define httpbin.org on port 40 and 443 as external hosts using ServiceEntries in the bookinfo namespace. Notice that we're labeling the ServiceEntry to use the egress gateway.
+
+[source,bash]
+----
+include::scripts/03.sh[]
+----
+
+Only allow ratings to call httpbin.org
+
+[source,bash]
+----
+include::scripts/04.sh[]
+----
+
+You should now be able to call httpbin.org from ratings:
+
+[source,bash]
+----
+include::scripts/05.sh[]
+----
+
+But NOT reviews:
+
+[source,bash]
+----
+include::scripts/06.sh[]
+----    

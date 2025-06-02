@@ -1,0 +1,1 @@
+kubectl label ns istio-egress istio.io/use-waypoint=egress-gateway

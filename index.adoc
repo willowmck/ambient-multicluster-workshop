@@ -28,3 +28,5 @@ include::modules/expose-productpage/expose-productpage.adoc[]
 include::modules/ambient-failover/ambient-failover.adoc[]
 
 include::modules/add-waypoints-for-l7/add-waypoints-for-l7.adoc[]
+
+include::modules/egress-gateway/egress-gateway.adoc[]
