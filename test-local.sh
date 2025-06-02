@@ -17,7 +17,7 @@ if [ -z "$CLUSTER2" ]; then
   export CLUSTER2=colima-cluster2
 fi
 
-modules=('env-prep' 'deploy-bookinfo' 'install-istio' 'expose-productpage')
+modules=('env-prep' 'deploy-bookinfo' 'install-istio' 'expose-productpage' 'ambient-failover')
 
 CWD=$(pwd)
 

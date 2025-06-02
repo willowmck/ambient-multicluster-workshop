@@ -1,0 +1,1 @@
+kubectl scale deploy details-v1 --replicas=2 --context $CLUSTER1

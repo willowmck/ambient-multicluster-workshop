@@ -1,0 +1,1 @@
+kubectl scale deploy productpage-v1 --replicas=0 --context $CLUSTER1

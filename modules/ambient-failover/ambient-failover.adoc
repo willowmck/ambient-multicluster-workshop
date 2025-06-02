@@ -1,0 +1,44 @@
+== Automatic and Manual Failover
+
+=== productpage failover
+image:assets/image-5.png[]
+
+Scale down productpage on cluster1 to simulate a failure:
+
+[source,bash]
+----
+include::scripts/01.sh[]
+----
+
+Visit the application in your browser and you'll see traffic is not impacted because we are failing over to cluster2 automatically.
+
+Scale productpage back up.
+
+[source,bash]
+----
+inclusde::scripts/02.sh[]
+----
+
+=== details failover
+image:assets/image-6.png[]
+
+We can also scale down other services. Let's enable `details` to be multi-cluster and scale it down.
+
+[source,bash]
+----
+include::scripts/03.sh[]
+----
+
+[source,bash]
+----
+inclusde::scripts/04.sh[]
+----
+
+Visit the application in your browser and you'll see traffic is not impacted because we are failing over from productpage.cluster1 to bookinfo.cluster2 automatically.
+
+Scale details back up.
+
+[source,bash]
+----
+inclusde::scripts/05.sh[]
+----
