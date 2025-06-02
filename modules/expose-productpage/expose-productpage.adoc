@@ -13,7 +13,7 @@ Wait until a LB IP gets assigned to bookinfo-gateway-istio svc and then visit th
 
 [source,bash]
 ----
-inclusde::scripts/02.sh[]
+include::scripts/02.sh[]
 ----
 
 Voila! This should be round robinning between productpage on both clusters.
