@@ -1,0 +1,13 @@
+== Istio Waypoints for L7 Traffic
+
+Istio Waypoints enable Layer 7 traffic management in an Ambient Mesh, providing advanced capabilities like routing, authorization, observability, and security policies. Acting as dedicated traffic proxies, Waypoints handle HTTP, gRPC, and other application-layer protocols, seamlessly integrating with Istio's security model to enforce fine-grained traffic control.
+
+Let's apply a Waypoint for the bookinfo namespace and create a header-based routing policy:
+
+- Traffic going to review service should route to reviews-v1 by default.
+- Requests with the header `end-user: jason` should be directed to reviews-v2.
+
+[source,bash]
+----
+include::scripts/01.sh[]
+----
