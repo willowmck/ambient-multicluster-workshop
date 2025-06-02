@@ -1,0 +1,33 @@
+== Gloo Management Plane
+
+Optionally, you can deploy the Gloo Management Plane that provides many benefits and features. For this lab, we'll just focus on the UI and the service graph.
+
+Start by downloading the meshctl cli
+
+[source,bash]
+----
+include::scripts/01.sh[]
+----
+
+Cluster1 will act as the management cluster and workload cluster: (see link:examples/mgmt-values.yaml[mgmt-values.yaml] for reference)
+
+[source,bash]
+----
+include::scripts/02.sh[]
+----
+
+Then, register cluster2 as a workload cluster to cluster1:
+
+[source,bash]
+----
+include::scripts/03.sh[]
+----
+
+Launch the UI:
+
+[source,bash]
+----
+include::scripts/04.sh[]
+----
+
+image::assets/gloo-mgmt-ui.png

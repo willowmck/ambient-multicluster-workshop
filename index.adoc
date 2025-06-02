@@ -32,3 +32,5 @@ include::modules/add-waypoints-for-l7/add-waypoints-for-l7.adoc[]
 include::modules/egress-gateway/egress-gateway.adoc[]
 
 include::modules/vm-integration/vm-integration.adoc[]
+
+include::modules//gloo-management-plane/gloo-management-plane.adoc[]
